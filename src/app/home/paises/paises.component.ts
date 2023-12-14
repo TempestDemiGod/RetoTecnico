@@ -86,6 +86,15 @@ export class PaisesComponent implements OnInit{
     contenedor?.classList.remove('seccion-grid')
   }
   searchCountries(){
+   if(this.country.length != 0){
+    const nameCountry = this.country.split(" ");
+    const newNameCountry = nameCountry.map((country) => {
+      return country[0].toUpperCase() + country.slice(1).toLowerCase();
+    });
+    this.country = newNameCountry.join(" ");
+   }
+
+
     // query continents 
     let text = ''
     if(this.listCountrys.length == 0){
