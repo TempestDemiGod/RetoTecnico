@@ -1,0 +1,120 @@
+.detailCountry-container{
+    background-color: rgb(255, 255, 255);
+    width: 26vw;
+    height: 90vh;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    box-shadow: 1px 1px 6px black;
+}
+.container{
+    width: 80%;
+    margin: 0 auto; 
+}
+.imgDetail{
+    width: 100%;
+    height: 12vw;
+    border-radius: 1rem;
+}
+.states-container{
+    height: 30vh;
+    overflow-y: scroll;
+    
+}
+::-webkit-scrollbar{
+    width: .4em;
+    opacity: 0.3;
+}
+::-webkit-scrollbar-track{
+    background: none;
+    
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(3, 157, 255,.5);
+    border-radius: 4rem;
+}
+.btn-close{
+    display: flex;
+    justify-content: end;
+    margin-top: 1rem;
+}
+.img-contry{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 20vh;
+    border-radius: 1rem ;
+    background-position: center;
+    background-size:cover ;
+}
+.close-info{
+    width: 8%;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36%;
+    margin: 0;
+    padding: 0;
+}
+.flag-country{
+    width: 18%;
+    min-width: 3rem;
+    margin-right: 4%;
+    height: 40%;
+}
+.info-country{
+    width: 60%;
+}
+.name-country{
+    color: #039DFF;
+    margin: 0;
+    padding: 0;
+    font-size-adjust: calc(100%);
+}
+.name-continent{
+    margin: 0;
+    padding: 0;
+}
+p{
+    color:#8A8A8A;
+    &>span{
+        color: #039DFF;
+    }
+}
+.allInfo{
+    height: 90%;
+    overflow-y: scroll;
+}
+@media screen and (max-width: 800px) {
+    .detailCountry-container{
+        position: fixed;
+        width: 60vw;
+        z-index: 2;
+    }
+    .close-info{
+        margin-right: 2vw;
+    }
+}
+@media screen and (max-width: 420px) {
+    .detailCountry-container{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        height: 100%;
+        z-index: 2;
+    }
+    .close-info{
+        margin-right: 4vw;
+    }
+}
+@media screen and (max-height: 600px) {
+    .allInfo{
+        height: 80%;
+        overflow-y: scroll;
+    }
+}

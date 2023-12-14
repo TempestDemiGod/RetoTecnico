@@ -1,0 +1,157 @@
+
+.seccionInfo-cards{
+    width: 100%;
+    margin: 0 auto;
+}
+input:focus {
+    outline: none;
+}
+.search-container{
+    padding: 1rem 0;
+    width: 100%;
+    &> .search{
+        width: 80%;
+        height: 4rem;
+        background-color: rgb(255, 255, 255);
+        margin: 0 auto;
+        display: flex;
+        padding: 0.5rem 2rem;
+        border-radius: 4vw;
+        justify-content: space-between;
+        box-shadow: 1px 2px 4px black;
+        &> .btn-search{
+            background-color: #009CFF;
+            border: none;
+            border-radius: 4vw;
+            width: 4rem;
+            height: 3rem;
+            color: rgb(255, 255, 255);
+            padding: 0 2rem;
+            transform: translate(1%,6%);
+        }
+        & > .input-data{
+            width: 60%;
+            & > div{
+                width: 100%;
+                & > input{
+                    width: 100%;
+                    background: none;
+                    border: none;
+                }
+                float: left;
+                & > .menu-countinents{
+                    position: relative;
+                    z-index: 2;
+                    display: none;
+                    background-color: rgb(255, 255, 255);
+                    box-shadow: 1px 2px 5px black;
+                    border-radius: 0.4rem;
+                    margin-top: 2rem;
+                    & > .btn-countinents{
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(30%,1fr));
+                        gap: 0.4rem;
+                        padding: 0.4rem;
+                    }
+                    & > .header-filter{
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0.4rem 1rem;
+                        & > button{
+                            background: none;
+                            border: none;
+                            color: #009CFF;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+.clearFilter{
+    cursor: pointer;
+}
+.input-data div:hover{
+    & > .menu-countinents{
+        display: block;
+    }
+}
+.select{
+    box-shadow: 0px 0px 12px #009CFF;
+}
+.btnContinent{
+    background: none;
+    border: none;
+    height: 6rem;
+    cursor: pointer;
+    width: 90%;
+    margin: 0;
+}
+.card-continent{
+    width: 100%;
+}
+.selector-continent{
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+    gap: 2rem 0;
+    width: max-content;
+    justify-items: center;
+    background-color: aquamarine;
+}
+.allContinents{
+    background-size: cover;
+    background-position: center;
+}
+.seccion-grid{
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    grid-template-areas:  'derecha izquierda';
+    justify-content: space-between;
+}
+.contenedor{
+    grid-area: derecha;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+    gap: 2rem 0;
+    justify-items: center;
+}
+
+.nameGrid{
+    grid-area: izquierda;
+    
+}
+.d-none{
+    display: none;
+}
+@media screen and (max-width: 800px) {
+    .contenedor{
+        grid-area: derecha;
+        width: 100%;
+        gap: 2rem 0;
+    }    
+    .seccion-grid{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width: 640px) {
+    .seccionBusqueda{
+        position: relative;
+        float: left;  
+    }
+    .menu-countinents{
+        position: absolute;
+        width: 160%;
+        .btn-countinents{
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+}
+.btn-search{
+    cursor: pointer;
+}

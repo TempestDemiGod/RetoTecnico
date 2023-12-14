@@ -1,0 +1,55 @@
+
+.main{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 2.4fr 10fr;
+    grid-template-areas: 'menu countrys';
+}
+.menu{
+    grid-area: menu;
+    background-color: #676767;
+    margin: 0;
+    min-height: 100vh;
+}
+.list-card-country{
+    grid-area: countrys;
+    margin: 0;
+    padding: 0;
+}
+.menu-despliegue{
+    margin-top: 2vh;
+    margin-left: 2vw;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .menu{
+        position: fixed;
+        width: 40vw;
+        height: 100rem;
+        z-index: 3;
+        display: none;
+    }
+    .main .openMenu{
+        display: block !important;
+    }
+    .main{
+        margin: 0;
+        padding: 0;
+        grid-template-columns: 12fr;
+    grid-template-areas: 'countrys';
+    }
+    .menu-despliegue{
+        display: block;
+    }
+}
+@media screen and (max-width: 600px) {
+    .menu{
+        width: 100%;
+        height: 100%;
+    }
+}

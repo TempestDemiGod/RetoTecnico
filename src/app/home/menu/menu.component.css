@@ -1,0 +1,87 @@
+
+
+.logo-menu{
+    background-color: #DBDBDB;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    border-radius: .5rem ;
+    color: #636363;
+}
+
+.nav-op{
+    list-style: none;
+    width: 80%;
+    padding: 0;
+    margin: 1rem auto;
+    & > li{
+        margin-bottom: 1rem;        
+        font-family: sans-serif;
+        & > button{
+            border-radius: .5rem;
+            width: 90%;
+            margin: 0;
+            color: #FFFFFF;
+            padding: .6rem 0;
+            font-size: 1.2vw;
+            text-align: start;
+            padding-left: 10%;
+            height: 100%;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+        & > button:hover{
+            background-color: #FFFFFF;
+            color: #747474;
+        }
+    }
+}
+.nav-op .selection{
+        & > button{
+            background-color: #FFFFFF;
+            color: #747474;
+        }
+}
+.btn-close{
+    display: flex;
+    justify-content: end;
+    margin-top: 1rem;
+    display: none;
+}
+.close-info{
+    width: 8%;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+    .close-info{
+        margin-right: 4vw;
+    }
+    .nav-op{
+        & > li{
+            & > button{
+                font-size: 4vw;
+            }
+        }
+    }
+    .btn-close{
+        display: flex;
+    }
+}
+@media screen and (max-width: 340px) {
+    .close-info{
+        margin-right: 4vw;
+    }
+    .nav-op{
+        width: 80%;
+        & > li{
+            & > button{
+                font-size: 10vw;
+            }
+        }
+    }
+}
