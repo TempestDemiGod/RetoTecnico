@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { CountrysServiceService } from '../../../services/countrys-service.service';
+import { CountrysServiceService } from 'src/services/countrys-service.service';
 
 @Component({
   selector: 'app-detail-country',
@@ -28,14 +28,13 @@ export class DetailCountryComponent implements OnInit{
     this.nameContinent=this.dataCountry.continent.name
     this.capital=this.dataCountry.capital
     this.language=this.dataCountry.languages[0].name
+    let namecurrency= this.dataCountry.currency
     this.states=this.dataCountry.states
     this.servicesCountrys.getAllCountries(this.nameCountry).then(res =>{
       if(res.ok){
           res.json().then(listCountries =>{
             this.allInfoCountrys = listCountries
             this.population = this.allInfoCountrys[0].population
-            console.log(this.dataCountry)
-            console.log(this.allInfoCountrys[0].currencies.nameCountry)
             this.currency= this.dataCountry.currency
             this.flagCountry = this.allInfoCountrys[0].flags.png
             return listCountries

@@ -64,7 +64,11 @@ input:focus {
                         }
                     }
                 }
-                
+                &:hover{
+                    & > .menu-countinents{
+                        display: block;
+                    }
+                }
             }
         }
     }
@@ -72,11 +76,7 @@ input:focus {
 .clearFilter{
     cursor: pointer;
 }
-.input-data div:hover{
-    & > .menu-countinents{
-        display: block;
-    }
-}
+
 .select{
     box-shadow: 0px 0px 12px #009CFF;
 }
